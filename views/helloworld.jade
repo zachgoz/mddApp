@@ -1,0 +1,22 @@
+doctype 5
+html
+  head
+    link(href="/stylesheets/style.css" rel="stylesheet")
+  img(src="images/helloworld2.png") 
+  h2 Hello World Example  
+  hr
+  h2  #{tabletitle + "  -  " + reportdate}
+  table(border='1')
+    tr
+      th #{header1}
+      th #{header2}
+      th #{header3}
+      th #{header4}
+      th #{header5}
+    for user in users
+      tr
+        td= user.customerid
+        td= user.customer
+        td= user.firstname
+        td= user.lastname
+        td= user.phone
