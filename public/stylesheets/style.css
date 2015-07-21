@@ -1,68 +1,45 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body, html {
+	height: 100%;
+	background-image: url('/images/concrete_seamless.png');
+	background-repeat: repeat;
+}
+/**
+ * Profile image component
+ */
+.profile-header-container{
+	margin: 0 auto;
+	text-align: center;
 }
 
-a {
-  color: blue;
+.profile-header-img {
+	padding: 54px;
 }
-h1 {font-size:30px; color:blue;}
-h2 {font-size:20px; color:blue;}
-#standardsize img
-{
-height:220px;
-width:780px;
+
+.profile-header-img > img.img-circle {
+	width: 300px;
+	height: 300px;
+	border: 2px solid #51D2B7;
 }
-.formtable {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 0px;
-	border-color: #999999;
-	border-collapse: collapse;
+
+.profile-header {
+	margin-top: 43px;
 }
-.stabletable {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 0px;
-	border-color: #ffffff;
-	border-collapse: collapse;
+
+/**
+ * Ranking component
+ */
+.rank-label-container {
+	margin-top: -19px;
+	/* z-index: 1000; */
+	text-align: center;
 }
-.hovertable {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 1px;
-	border-color: #999999;
-	border-collapse: collapse;
+
+.label.label-default.rank-label {
+	background-color: rgb(81, 210, 183);
+	padding: 5px 10px 5px 10px;
+	border-radius: 27px;
 }
-.hovertable th {
-	background-color:#c3dde0;
-	border-width: 1px;
-	width: 85px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #a9c6c9;
-}
-.hovertable tr {
-	background-color:whitesmoke;
-}
-.hovertable td {
-	border-width: 1px;
-	width: 85px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #a9c6c9;
-}
-/* ----------- FORM LAYOUT ----------- */
-#form_wrapper
-{
-	float: left;
-    margin:0 auto;
-    height:auto;
-    width: 1000px;
-    padding:50x;
-    border:solid 5px white;
-    background: white;
+
+.thumbnail{
+	background-color: rgb(81, 210, 183);
 }

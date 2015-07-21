@@ -14,6 +14,8 @@ var sample = require('./routes/sample');
 
 var dbquery = require('./routes/dbquery');
 
+var profile = require('./routes/profile');
+
 
 
 var http = require('http');
@@ -54,6 +56,8 @@ app.get('/helloworld', helloworld.hello);
 
 app.get('/sample', sample.presentform);
 app.post('/sample', sample.echodata);
+
+app.get('/profile', profile.profile);
 
 app.get('/dbquery1', dbquery.query1);				//  DB Query Examples 
 app.get('/dbquery2', dbquery.query2);
