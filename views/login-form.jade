@@ -19,14 +19,14 @@ html
                             span(class="label label-default rank-label") Employee
             .card.card-container
                 p#profile-name.profile-name-card
-
-                form.form-signin
+                h1.text-center Login, Doc
+                form.form-signin(method='post',role='form',id='login', name='login', action='/login')
                     span#reauth-email.reauth-email
                     input#inputEmail.form-control(type='email',name='email' placeholder='Email address', required='', autofocus='')
                     input#inputPassword.form-control(type='password', name='password',placeholder='Password', required='')
                     button.btn.btn-lg.btn-primary.btn-block.btn-signin(type='submit') Sign in
                     a.forgot-password.text-center
-                        | Forgot the password?
+                        | Forgot password?
             // /card-container
             // /container
 

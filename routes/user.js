@@ -14,6 +14,8 @@ exports.loginForm = function(req, res) {
 
 exports.doLogin = function(req, res) {
     if (req.body.email && req.body.password) {
+        console.log(req.body.email)
+        console.log(req.body.password)
         var myQuery = User.findOne({
             'Email': req.body.email
         });
@@ -21,7 +23,7 @@ exports.doLogin = function(req, res) {
         myQuery.exec(function(err, user) {
             if (!err) {
                 if (!user) {
-                    res.redirect('/login/error');
+                    res.redirect('/login');
                 } else {
                     req.session.user = {
                         "_id": user._id,
@@ -46,7 +48,7 @@ exports.doLogin = function(req, res) {
                     console.log('Logged in User: ' + user);
                     console.log('My Session worked because My name is: ' + req.session.user.FirstName);
                     if (user.RoleName === "Customer") {
-                        res.redirect('/customer');
+                        res.redirect('/profile');
                     } else if (user.RoleName === "Onsite Engineer") {
                         res.redirect('/engineer');
                     } else {
