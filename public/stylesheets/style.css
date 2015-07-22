@@ -20,7 +20,7 @@ body, html {
 .profile-header-img > img.img-circle {
 	width: 300px;
 	height: 300px;
-	border: 2px solid #51D2B7;
+	border: 2px solid #337AB7;
 }
 
 .profile-header {
@@ -37,7 +37,7 @@ body, html {
 }
 
 .label.label-default.rank-label {
-	background-color: rgb(81, 210, 183);
+	background-color: #337AB7;
 	padding: 5px 10px 5px 10px;
 	border-radius: 27px;
 }
