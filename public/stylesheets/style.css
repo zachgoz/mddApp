@@ -78,22 +78,36 @@ body, html {
 .back-button{
 	font-size: 30px;
 	color: #fff;
+	z-index: 888;
+	position: relative;
 }
 
-.navbar-default .navbar-brand{
-	color:#fff;
+.title{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	padding-top: 8px;
 }
 
 .navbar-default{
 	background-color: #07A56A;
 }
+
+/***
+ * My Devices
+ */
+.badge-green{
+	background-color: #07A56A;
+}
+
 /***
  * Device Detail Page
  */
 
 .detailTitle, .detailSerial, .detailPic {
 	text-align: center;
-
 }
 
 

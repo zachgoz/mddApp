@@ -16,7 +16,7 @@ html
 
         +listGroup
             for d in data
-                h2.detailTitle= d._Product.ProductName
+                h4.detailTitle= d._Product.ProductName
                 .detailPic 
                     img(src="images/img_autoprep.png" width="200px")
                 h4.detailSerial SN: #{d.SerialNumber}

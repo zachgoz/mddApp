@@ -6,7 +6,7 @@ mixin nav(name, id, previousPage, style)
             a.button.navbar-toggle-always.navbar-left.back-button(href=previousPage)
                 span.glyphicon.glyphicon-chevron-left
 
-            a.navbar-brand= name
+            .title= name
  
         .collapse.navbar-collapse( id=id )
             ul.nav.navbar-nav
@@ -65,9 +65,9 @@ mixin listText(prefix)
     .list-group-item-text= prefix
         block 
 
-mixin deviceIG(status)
+mixin deviceIG(status, color)
     .iconLeft
-        div(class="badge pull-left")= status
+        div(class="badge pull-left badge-green")= status
 //- End group mixins
 
 
