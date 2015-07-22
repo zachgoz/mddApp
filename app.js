@@ -64,7 +64,7 @@ app.get('/sample', sample.presentform);
 app.post('/sample', sample.echodata);
 
 app.get('/profile', profile.profile);
-
+app.get('/request', request.request);
 
 //Login and Validate User Routes, Logout
 app.get('/login', user.loginForm);							//Display Login Form
