@@ -11,25 +11,16 @@ html
         link(rel='stylesheet', href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
+
         +nav("My Devices", "dropdown_menu", "/profile")
+
         +listGroup("links")
-            +listItem("link1.html")
-                +deviceIG('good') 
-                +listHeading MRI 27412
-                +listText SN:3465gsd35
-                +listText Room:Bldg 3 Room 53
-            +listItem("link1.html")
-                +deviceIG('good') 
-                +listHeading MRI 27412
-                +listText SN:3465gsd35
-                +listText Room:Bldg 3 Room 53
-            +listItem("link1.html")
-                +deviceIG('good') 
-                +listHeading MRI 27412
-                +listText SN:3465gsd35
-                +listText Room:Bldg 3 Room 53
-
-
+            for d in data
+                +listItem("link1.html")
+                    +deviceIG('good') 
+                    +listHeading= d._Product.ProductName
+                    +listText= d.SerialNumber
+                    +listText Room:Bldg 3 Room 53
 
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
