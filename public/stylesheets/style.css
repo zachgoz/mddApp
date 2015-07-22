@@ -13,6 +13,7 @@ body, html {
 
 .profile-header-img {
 	padding: 54px;
+	padding-bottom: 30px;
 }
 
 .profile-header-img > img.img-circle {

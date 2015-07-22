@@ -64,18 +64,6 @@ app.post('/sample', sample.echodata);
 
 app.get('/profile', profile.profile);
 
-app.get('/dbquery1', dbquery.query1);				//  DB Query Examples 
-app.get('/dbquery2', dbquery.query2);
-app.get('/dbquery3', dbquery.query3);
-app.get('/dbquery4', dbquery.query4);
-app.get('/dbquery5', dbquery.query5);
-app.get('/dbquery6', dbquery.query6);
-app.get('/dbquery7', dbquery.query7);
-app.get('/dbquery8', dbquery.query8);
-app.get('/dbquery9', dbquery.query9);
-app.get('/dbquery10', dbquery.query10);
-app.get('/dbquery11', dbquery.query11);
-app.get('/dbquery12', dbquery.query12);
 
 //Login and Validate User Routes, Logout
 app.get('/login', user.loginForm);							//Display Login Form

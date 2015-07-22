@@ -17,26 +17,30 @@ html
                         div(class='rank-label-container')
                             span(class="label label-default rank-label") Doctor
             div(class='row')
-                div(class='col-md-3 col-md-offset-3 text-center')
+                div(class='col-md-4 text-center')
+                    h3
+                        i(class='fa fa-check-circle' style="color: green")  8 in good standing
+                div(class='col-md-4 text-center')
+                    h3
+                        i(class='fa fa-exclamation-triangle' style="color: yellow")  2 need attention
+                div(class='col-md-4 text-center')
+                    h3
+                        i(class='fa fa-minus-circle' style="color: red")  1 past due
+            br
+            div(class='row')
+                div(class='col-md-3 col-md-offset-3 text-center' style="padding-bottom: 15px")
                     a(class="btn btn-sq-lg btn-primary")
                         br
-                        i(class="fa fa-wrench fa-5x")
+                        i(class="fa fa-heartbeat fa-5x")
                         br
                         p Equipment
-                        br
-                        br
-                div(class='col-md-3 text-center')
+
+                div(class='col-md-3 col-xs-col-xs-offset-1 text-center')
                     a(class="btn btn-sq-lg btn-primary")
                         br
                         i(class="fa fa-life-ring fa-5x")
                         br
                         p Service Requests
-            br
-            br
-            div(class='row')
-                div(class='col-md-2 col-md-offset-3')
-                    i(class='fa fa-check')
-                    |#{good} in good standing
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
