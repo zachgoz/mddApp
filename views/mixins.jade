@@ -61,12 +61,13 @@ mixin listHeading
     h4.list-group-item-heading
         block
  
-mixin listText
-    .list-group-item-text
-        block
+mixin listText(prefix)
+    .list-group-item-text= prefix
+        block 
 
 mixin deviceIG(status)
-    span(class="badge pull-left")= status
+    .iconLeft
+        div(class="badge pull-left")= status
 //- End group mixins
 
 

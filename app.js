@@ -18,7 +18,7 @@ var profile = require('./routes/profile');
 
 // My Devices Routes
 var mydevices = require('./routes/mydevices');
-
+var deviceDetail = require('./routes/device-detail');
 
 var http = require('http');
 var path = require('path');
@@ -55,6 +55,7 @@ app.get('/', routes.index);
 
 // My Devices Getters and Setters
 app.get('/mydevices', mydevices.devices);
+app.get('/device-detail', deviceDetail.deets);
 
 //Workshop samples
 app.get('/helloworld', helloworld.hello);

@@ -12,16 +12,22 @@ html
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
 
-        +nav("My Devices", "dropdown_menu", "/profile")
+        +nav("Device Detail", "dropdown_menu", "/mydevices")
 
-        +listGroup("links")
+        +listGroup
             for d in data
-                +listItem("/device-detail")
-                    +deviceIG('good') 
-                    +listHeading= d._Product.ProductName
-                    +listText('SN: ')= d.SerialNumber
-                    +listText Room: Bldg 3 Room 53
-
+                .detailTitle= d._Product.ProductName
+                .detailPic {Picture Goes here}
+                .detailSerial= d.SerialNumber
+                +listItem
+                    +listText('Status: ')= d.StatusDescription
+                +listItem 
+                    +listText('Room: ')= d.Room
+                +listItem 
+                    +listText('Install Date: ')= d.InstallDate
+                +listItem 
+                    +listText('Upcoming Preventitive Maintnence: ')= d.NextPMDate
+                    +listText('Description: ')= d.NextPMDescription
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
