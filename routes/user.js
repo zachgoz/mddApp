@@ -7,17 +7,17 @@ var async = require('async');
 
 exports.loginForm = function(req, res) {
     res.render('login-form', {
-        title: "Please Login to the J&J Service Portal",
+        title: "Login",
         buttonText: "Login"
     });
 };
 
 exports.doLogin = function(req, res) {
-    if (req.body.UserMail && req.body.Password) {
+    if (req.body.email && req.body.password) {
         var myQuery = User.findOne({
-            'Email': req.body.UserMail
+            'Email': req.body.email
         });
-        myQuery.where('Password').equals(req.body.Password);
+        myQuery.where('Password').equals(req.body.password);
         myQuery.exec(function(err, user) {
             if (!err) {
                 if (!user) {
@@ -71,7 +71,7 @@ exports.loginError = function(req, res) {
 
 exports.doLoginError = function(req, res) {
    res.render('login-form', {
-        title: "Please Login to the J&J Service Portal",
+        title: "Login",
         buttonText: "Login"
     });
 };
