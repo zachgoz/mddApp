@@ -17,10 +17,13 @@ html
         +listGroup("links")
             for d in data
                 +listItem("/device-detail")
-                    +deviceIG('good') 
-                    +listHeading= d._Product.ProductName
-                    +listText('SN: ')= d.SerialNumber
-                    +listText Room: Bldg 3 Room 53
+                    .row
+                        .col-xs-2 
+                            +deviceIG('good') 
+                        .col-xs-5 
+                             +listHeading= d._Product.ProductName
+                        .col-xs-5 
+                            +listText= d.Room
 
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')

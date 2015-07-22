@@ -16,9 +16,10 @@ html
 
         +listGroup
             for d in data
-                .detailTitle= d._Product.ProductName
-                .detailPic {Picture Goes here}
-                .detailSerial= d.SerialNumber
+                h2.detailTitle= d._Product.ProductName
+                .detailPic 
+                    img(src="images/img_autoprep.png" width="200px")
+                h4.detailSerial SN: #{d.SerialNumber}
                 +listItem
                     +listText('Status: ')= d.StatusDescription
                 +listItem 

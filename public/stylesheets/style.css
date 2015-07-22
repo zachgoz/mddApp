@@ -74,3 +74,30 @@ body, html {
     margin-left:15px;
     padding:6px 10px;
 }
+
+.back-button{
+	font-size: 30px;
+	color: #fff;
+}
+
+.navbar-default .navbar-brand{
+	color:#fff;
+}
+
+.navbar-default{
+	background-color: #07A56A;
+}
+/***
+ * Device Detail Page
+ */
+
+.detailTitle, .detailSerial, .detailPic {
+	text-align: center;
+
+}
+
+
+
+
+
+
