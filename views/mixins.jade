@@ -1,12 +1,12 @@
 //- Navbar mixins
-mixin nav(name, id, style)
+mixin nav(name, id, previousPage, style)
     - var style = (typeof style === 'undefined') ? "default" : style
     nav( role="navigation", class=["navbar", "navbar-" + style] )
         .navbar-header
-            buton.navbar-toggle.navbar-left
+            a.button.navbar-toggle.navbar-left(href=previousPage)
                 span.glyphicon.glyphicon-chevron-left
 
-            a.navbar-brand(href="#")= name
+            a.navbar-brand= name
  
         .collapse.navbar-collapse( id=id )
             ul.nav.navbar-nav
