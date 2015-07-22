@@ -16,6 +16,8 @@ var dbquery = require('./routes/dbquery');
 
 var profile = require('./routes/profile');
 
+// My Devices Routes
+var mydevices = require('./routes/mydevices');
 
 
 var http = require('http');
@@ -50,6 +52,9 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+
+// My Devices Getters and Setters
+app.get('/mydevices', mydevices.devices);
 
 //Workshop samples
 app.get('/helloworld', helloworld.hello);

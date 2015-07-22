@@ -62,3 +62,13 @@ body, html {
 	height: 25px !important;
 	padding:2px;
 }
+
+/***
+ * Navbar
+ */
+
+ .navbar-left {
+    float:left;
+    margin-left:15px;
+    padding:6px 10px;
+}
