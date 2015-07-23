@@ -2,7 +2,8 @@ var mongoose = require('mongoose');
 var Equipment = mongoose.model('Equipment');
 
 exports.deets = function(req, res){
-    Equipment.find({"SerialNumber": 'XR99960703'})
+    var serial = req.params.serial;
+    Equipment.find({"SerialNumber": serial})
              .populate("_Equipment")
              .populate("_Product")
              .exec(function (err, equip){

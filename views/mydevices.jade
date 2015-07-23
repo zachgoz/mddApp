@@ -16,7 +16,7 @@ html
 
         +listGroup("links")
             for d in data
-                +listItem("/device-detail")
+                +listItem("/device-detail/"+ d.SerialNumber)
                     .row
                         .col-xs-2 
                             if d.StatusDescription == "Online"

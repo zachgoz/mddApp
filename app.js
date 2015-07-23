@@ -61,7 +61,7 @@ app.get('/', routes.index);
 
 // My Devices Getters and Setters
 app.get('/mydevices', mydevices.devices);
-app.get('/device-detail', deviceDetail.deets);
+app.get('/device-detail/:serial', deviceDetail.deets);
 
 // My Devices Getters and Setters
 app.get('/myrequests', myrequests.requests);
