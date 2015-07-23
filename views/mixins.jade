@@ -69,9 +69,13 @@ mixin deviceIG(status, color)
     .iconLeft
         div(class="badge pull-left badge-green")= status
 
-mixin requestIG(status, color)
+mixin requestIGgreen(status)
     .iconLeft
         div(class="badge pull-left request-badge badge-green")= status
+
+mixin requestIGyellow(status)
+    .iconLeft
+        div(class="badge pull-left request-badge badge-yellow")= status
 //- End group mixins
 
 

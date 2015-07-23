@@ -6,7 +6,7 @@ exports.devices = function(req, res){
              .populate("_Equipment")
              .populate("_Product")
              .exec(function (err, equip){
-             		console.log(equip);
+             		//console.log(equip);
                 	res.render('mydevices', 
     				{ 
     					title: 'My Devices',

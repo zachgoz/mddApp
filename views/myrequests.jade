@@ -20,9 +20,9 @@ html
                     .row
                         .col-xs-3 
                             if d.CurrentStatus == "Completed"
-                                +requestIG(d.CurrentStatus, green)
+                                +requestIGgreen(d.CurrentStatus)
                             else 
-                                +requestIG(d.CurrentStatus, yellow)
+                                +requestIGyellow(d.CurrentStatus)
                         .col-xs-6 
                              +listHeading= d._Product.ProductName
                         .col-xs-3 
