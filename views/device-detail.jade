@@ -19,7 +19,10 @@ html
                 h4.detailTitle= d._Product.ProductName
                 .detailPic 
                     img(src="/images/"+d.SerialNumber+".jpg" width="200px")
-                h4.detailSerial SN: #{d.SerialNumber}
+                
+
+                h4.detailSerial SN: #{d.SerialNumber} 
+                    div(class="badge badge-green")= d.StatusDescription
                 +listItem
                     +listText('Status: ')= d.StatusDescription
                 +listItem 
