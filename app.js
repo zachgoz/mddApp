@@ -20,6 +20,11 @@ var profile = require('./routes/profile');
 var mydevices = require('./routes/mydevices');
 var deviceDetail = require('./routes/device-detail');
 
+// My Requests Routes
+var myrequests = require('./routes/myrequests');
+var requestDetail = require('./routes/request-detail');
+
+
 var http = require('http');
 var path = require('path');
 
@@ -56,6 +61,10 @@ app.get('/', routes.index);
 // My Devices Getters and Setters
 app.get('/mydevices', mydevices.devices);
 app.get('/device-detail', deviceDetail.deets);
+
+// My Devices Getters and Setters
+app.get('/myrequests', myrequests.reqs);
+app.get('/request-detail', requestDetail.deets);
 
 //Workshop samples
 app.get('/helloworld', helloworld.hello);
