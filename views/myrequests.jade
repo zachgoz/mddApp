@@ -20,13 +20,13 @@ html
                     .row
                         .col-xs-3 
                             if d.CurrentStatus == "Completed"
-                                +deviceIG(d.CurrentStatus, green)
+                                +requestIG(d.CurrentStatus, green)
                             else 
-                                +deviceIG(d.CurrentStatus, yellow)
+                                +requestIG(d.CurrentStatus, yellow)
                         .col-xs-6 
-                             +listHeading= d.ProblemTypeDescription
+                             +listHeading= d._Product.ProductName
                         .col-xs-3 
-                            +listText= d.Room
+                            +listText= d.ProblemTypeDescription
 
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')

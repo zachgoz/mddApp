@@ -7,7 +7,7 @@ exports.deets = function(req, res){
              .populate("_Product")
              .exec(function (err, equip){
              		//console.log(equip);
-                	res.render('device-detail', 
+                	res.render('request-detail', 
     				{ 
     					title: 'Details',
     					data: equip

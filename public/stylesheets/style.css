@@ -7,6 +7,9 @@ body, html {
 .badge{
 	  white-space: normal;
 }
+.request-badge{
+	width: 100%;
+}
 /**
  * Profile image component
  */
