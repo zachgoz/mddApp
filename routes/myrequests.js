@@ -1,15 +1,16 @@
 var mongoose = require('mongoose');
 var Equipment = mongoose.model('Equipment');
+var ServiceOrder = mongoose.model('ServiceOrder');
 
-exports.reqs = function(req, res){
-    Equipment.find({"_User":48243})
+exports.requests = function(req, res){
+    ServiceOrder.find({"_CreatedBy":48243})
              .populate("_Equipment")
              .populate("_Product")
              .exec(function (err, equip){
-             		console.log(equip);
-                	res.render('mydevices', 
+             		//console.log(equip);
+                	res.render('myrequests', 
     				{ 
-    					title: 'My Devices',
+    					title: 'My Requests',
     					data: equip
 					});
               });

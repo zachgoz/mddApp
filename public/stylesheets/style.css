@@ -3,6 +3,10 @@ body, html {
 	background-color: #F7F7F7;
 	background-repeat: repeat;
 }
+
+.badge{
+	  white-space: normal;
+}
 /**
  * Profile image component
  */

@@ -64,7 +64,7 @@ app.get('/mydevices', mydevices.devices);
 app.get('/device-detail', deviceDetail.deets);
 
 // My Devices Getters and Setters
-app.get('/myrequests', myrequests.reqs);
+app.get('/myrequests', myrequests.requests);
 app.get('/request-detail', requestDetail.deets);
 
 //Workshop samples
