@@ -113,6 +113,9 @@ body, html {
 .badge-yellow{
 	background-color: #F0C61D;
 }
+.badge-red{
+    background-color: #CA1818;
+}
 /***
  * Device Detail Page
  */

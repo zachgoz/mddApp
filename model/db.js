@@ -88,6 +88,7 @@ var equipmentSchema = new mongoose.Schema({
     },
     StatusDescription: String,
     SerialNumber: String,
+    Service: String,
     Room: String,
     InstallDate: Date,
     NextPMDate: Date,

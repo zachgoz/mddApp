@@ -7,6 +7,7 @@ exports.devices = function(req, res){
              .populate("_Product")
              .exec(function (err, equip){
              		//console.log(equip);
+                    var rightnow = Date.now();
                 	res.render('mydevices', 
     				{ 
     					title: 'My Devices',

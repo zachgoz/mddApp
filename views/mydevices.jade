@@ -18,13 +18,13 @@ html
             for d in data
                 +listItem("/device-detail/"+ d.SerialNumber)
                     .row
-                        .col-xs-2 
-                            if d.StatusDescription == "Online"
-                                +deviceIG(d.StatusDescription, green)
-                            else if d.StatusDescription == "Offline"
-                                +deviceIG(d.StatusDescription, red)
-                            else if d.StatusDescription == "Pending"
-                                +deviceIG(d.StatusDescription, yellow)
+                        .col-xs-2
+                            if d.Service == "Good"
+                                +deviceIGgreen(d.Service)
+                            else if d.Service == "Soon"
+                                +deviceIGyellow(d.Service)
+                            else if d.Service == "Past"
+                                +deviceIGred(d.Service)
                         .col-xs-5 
                              +listHeading= d._Product.ProductName
                         .col-xs-5 

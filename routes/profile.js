@@ -11,7 +11,7 @@ exports.profile = function(req, res){
     var bad = 0;
     async.parallel([
             function(callback){
-                Equipment.find({"NextPMDate" : {"$gt": Date.now()+1209600}})
+                Equipment.find({"Service" : "Good"})
                     .exec(function (err, equipment){
                         if (!err){
                             equipment.forEach(function(myequip){
@@ -25,7 +25,7 @@ exports.profile = function(req, res){
                     });
             },
             function(callback){
-                Equipment.find({"NextPMDate" : {"$gt": Date.now(),"$lte":Date.now()+1209600}})
+                Equipment.find({"Service" : "Soon"})
                     .exec(function (err, equipment){
                         if (!err){
                             equipment.forEach(function(myequip){
@@ -39,7 +39,7 @@ exports.profile = function(req, res){
                     });
             },
             function(callback){
-                Equipment.find({"NextPMDate" : {"$lte": Date.now()}})
+                Equipment.find({"Service" : "Past"})
                     .exec(function (err, equipment){
                         if (!err){
                             equipment.forEach(function(myequip){

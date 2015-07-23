@@ -65,9 +65,15 @@ mixin listText(prefix)
     .list-group-item-text= prefix
         block 
 
-mixin deviceIG(status, color)
+mixin deviceIGgreen(status, color)
     .iconLeft
         div(class="badge pull-left badge-green")= status
+mixin deviceIGyellow(status, color)
+    .iconLeft
+        div(class="badge pull-left badge-yellow")= status
+mixin deviceIGred(status, color)
+    .iconLeft
+        div(class="badge pull-left badge-red")= status
 
 mixin requestIGgreen(status)
     .iconLeft
