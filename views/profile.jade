@@ -9,41 +9,49 @@ html
         link(rel='stylesheet', href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
         link(rel='stylesheet', href='/stylesheets/style.css')
     body
-        div(class='container')
+
             div(class='row')
                 div(class='profile-header-container')
                     div(class='profile-header-img')
+                        h1.text-center What's up, doc?
                         img(class="img-circle" src="http://api.randomuser.me/portraits/women/39.jpg")
                         div(class='rank-label-container')
                             span(class="label label-default rank-label") Doctor
-            h1.text-center What's up, doc?
-            div(class='row')
-                div(class='col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4')
-                    div.btn-group-vertical
-                        button.btn.btn-default(type='button')
-                            h3
-                                i(class='fa fa-check-circle' style="color: green")  #{good} in good standing
-                        button.btn.btn-default(type='button')
-                            h3
-                                i(class='fa fa-exclamation-triangle' style="color: #E5E500")  #{attention} need attention
-                        button.btn.btn-default(type='button')
-                            h3
-                                i(class='fa fa-minus-circle' style="color: red")  #{bad} past due
+
             br
             div(class='row')
-                div(class='col-md-3 col-md-offset-3 text-center' style="padding-bottom: 15px")
-                    a(href='/mydevices' class="btn btn-sq-lg btn-primary")
+                div(class='col-sm-6 text-center front-div-left' style="padding-bottom:15px;")
+                    a(href='/mydevices' class="btn  btn-primary front-button")
                         br
                         i(class="fa fa-heartbeat fa-5x")
+                        h3 Equipment
                         br
-                        p Equipment
+                        ul.list-group
+                            li.list-group-item
+                                h4
+                                    i(class='fa fa-check-circle' style="color: green")  #{good} in good standing
+                            li.list-group-item
+                                h4
+                                    i(class='fa fa-exclamation-triangle' style="color: #E5E500")  #{attention} need attention
+                            li.list-group-item 
+                                h4
+                                    i(class='fa fa-minus-circle' style="color: red")  #{bad} past due
 
-                div(class='col-md-3 col-xs-col-xs-offset-1 text-center' style="padding-bottom: 15px")
-                    a(href='/myrequests' class="btn btn-sq-lg btn-primary")
+
+                div(class='col-sm-6 text-center front-div-right')
+                    a(href='/myrequests' class="btn btn-primary front-button")
                         br
                         i(class="fa fa-life-ring fa-5x")
+                        h3 Service Requests
                         br
-                        p Service Requests
+                        ul.list-group
+                            li.list-group-item
+                                h4
+                                    i(class='fa fa-exclamation-triangle' style="color: #E5E500")  #{attention} Being Worked On
+                            li.list-group-item
+                                h4
+                                    i(class='fa fa-check-circle' style="color: green")  #{good} Completed
+
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
