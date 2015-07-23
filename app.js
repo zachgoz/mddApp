@@ -7,6 +7,7 @@ var db = require('./model/db');
 var routes = require('./routes');
 var user = require('./routes/user');
 var customer = require('./routes/customer');
+var request = require('./routes/request');
 
 var helloworld = require('./routes/helloworld');
 
@@ -73,7 +74,7 @@ app.get('/sample', sample.presentform);
 app.post('/sample', sample.echodata);
 
 app.get('/profile', profile.profile);
-//app.get('/request', request.request);
+app.get('/request', request.request);
 
 //Login and Validate User Routes, Logout
 app.get('/login', user.loginForm);							//Display Login Form
