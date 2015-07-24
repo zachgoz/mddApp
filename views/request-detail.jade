@@ -13,7 +13,7 @@ html
     body
 
         +nav("Request Detail", "dropdown_menu", "/myrequests")
-
+        
         +listGroup
             for d in data
                 h4.detailTitle= d._Product.ProductName
@@ -29,6 +29,8 @@ html
                 +listItem 
                     +listText('Upcoming Preventitive Maintnence: ')= d.NextPMDate
                     +listText('Description: ')= d.NextPMDescription
+            
+
         div.text-center
             button.btn.btn-primary(type='button') Submit Request
 
