@@ -28,12 +28,13 @@ html
                 +listItem 
                     +listText('Room: ')= d.Room
                 +listItem 
-                    +listText('Install Date: ')= d.InstallDate
+                    +listText('Install Date: ')= d.InstallDate.toDateString()
                 +listItem 
-                    +listText('Upcoming Preventive Maintnence: ')= d.NextPMDate
+                    +listText('Upcoming Preventive Maintnence: ')= d.NextPMDate.toDateString()
                     +listText('Description: ')= d.NextPMDescription
         div.text-center
-            button.btn.btn-primary(type='button' href='/request') Submit Request
+            a(href='/request')
+                button.btn.btn-primary(type='button') Submit Request
 
         script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')

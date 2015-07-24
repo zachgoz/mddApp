@@ -12,5 +12,54 @@ html
       link(rel='stylesheet', href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
       link(rel='stylesheet', href='/stylesheets/style.css')
    body
-      +nav("Request", "dropdown_menu", "/mydevices")
-
+      +nav("Submit Request", "dropdown_menu", "/mydevices")
+      div.container
+          div.form-horizontal
+              .form-group
+              label.col-sm-2.control-label Customer:
+              .col-sm-10
+                  p.form-control-static Doctor
+              .form-group
+              label.col-sm-2.control-label Date:
+              .col-sm-10
+                  p.form-control-static #{moment(Date.now()).format('dddd, MMMM Do')}
+              .form-group
+              label.col-sm-2.control-label(for="Equipment") Equipment:
+              .col-sm-10
+                  select.form-control(name="Equipment" id="Equipment" required autofocus)
+                      option(value="" default selected) Select Your Equipment For Service
+                      - for equipment in equipments
+                        option(value="{\"equipid\": #{equipment._id}, \"prodid\": #{equipment.ProductID}}") #{equipment.SerialNumber} - #{equipment.ProductName} - #{equipment.Room})
+              .form-group
+              label.col-sm-2.control-label(for="ProblemType") Service Type:
+              .col-sm-10
+                  select.form-control(name="ProblemType" id="ProblemType"  required)
+                      option(value="" default selected) Select The Problem Type You Are Experiencing
+                      - for serviceType in serviceTypes
+                        option(value="#{serviceType.ProblemTypeDescription}") #{serviceType.ProblemTypeDescription}
+              .form-group
+              label.col-sm-2.control-label(for="Priority") Priority:
+              .col-sm-10
+                  select.form-control(name="Priority" id="Priority"  required)
+                      option(value="" default selected) Select The Severity Of The Issue You Are Experiencing
+                      - for priority in priorities
+                        option(value="#{priority.PriorityDescription}") #{priority.PriorityDescription}
+              .form-group
+              label.col-sm-2.control-label(for="ContactName") Contact Name:
+              .col-sm-10
+                  input.form-control(type="text" name="ContactName" id="ContactName"  required placeholder="Example: Albert Einstien")
+              .form-group
+              label.col-sm-2.control-label(for="ContactEmail") Contact Email:
+              .col-sm-10
+                  input.form-control(type="email" name="ContactEmail" id="ContactEmail"  required placeholder="Example: aeinstein@genius.com")
+              .form-group
+              label.col-sm-2.control-label(for="ContactPhone") Contact Phone:
+              .col-sm-10
+                  input.form-control(type="tel" name="ContactPhone" id="ContactPhone"  required placeholder="Example: 123-456-7890")
+              .form-group
+              .col-sm-offset-2.col-sm-10
+                  textarea.form-control(id="ProblemNotes" rows="7" name="ProblemNotes" placeholder="Add Any Additonal Problem Notes Here...")
+              div.text-center.button-group(style="margin-top: 5em")
+                  input(type="hidden" name="Today" value="#{Today}")
+                  button.btn.btn-success(type="submit" name="submit" value="submit") Create New Service Request
+                  button.btn.btn-danger(type='button', data-dismiss='modal') Cancel

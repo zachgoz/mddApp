@@ -2,6 +2,8 @@ doctype 5
 html
   head
   body
+    +nav("My Devices", "dropdown_menu", "/mydevices")
+
     form(role="form" id="create" name="create" method="post" action="/customer/create")
       .modal-header
         button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
